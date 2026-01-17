@@ -1,0 +1,163 @@
+@if (personalInfo()) {
+  <div class="backoffice-container">
+    <div class="dashboard-header">
+      <h1>Dashboard Portfolio</h1>
+      <p class="subtitle">Gérez vos informations professionnelles</p>
+    </div>
+
+    <div class="dashboard-grid">
+      <!-- Card Profil -->
+      <div class="dashboard-card profile-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Profil</h3>
+          <p class="card-description">Informations personnelles</p>
+          <div class="card-stats">
+            <span class="stat-item">{{ personalInfo()!.prenom }} {{ personalInfo()!.nom }}</span>
+            <span class="stat-item">{{ personalInfo()!.age }} ans</span>
+          </div>
+        </div>
+        <button class="card-action-btn" (click)="openProfileModal()">
+          Voir les détails
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Card Diplôme (singulier) -->
+      <div class="dashboard-card diplomes-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Diplôme</h3>
+          <p class="card-description">Formation académique</p>
+          <div class="card-stats">
+            <span class="stat-badge">{{ personalInfo()!.diplome.levels }}</span>
+          </div>
+        </div>
+        <button class="card-action-btn" (click)="openDiplomesModal()">
+          Consulter
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Card Certifications -->
+      <div class="dashboard-card certifications-card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="M9 12l2 2 4-4"></path>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Certifications</h3>
+          <p class="card-description">Compétences certifiées</p>
+          <div class="card-stats">
+            <span class="stat-badge">{{ personalInfo()!.certification.length }} certification(s)</span>
+          </div>
+        </div>
+        <button class="card-action-btn" (click)="openCertificationsModal()">
+          Explorer
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Profil -->
+  <app-modal 
+    [isOpen]="isProfileModalOpen()" 
+    [title]="'Profil Personnel'"
+    (closeModal)="closeProfileModal()">
+    <div class="profile-modal-content">
+      <div class="profile-info-grid">
+        <div class="info-item">
+          <label>Prénom</label>
+          <p>{{ personalInfo()!.prenom }}</p>
+        </div>
+        <div class="info-item">
+          <label>Nom</label>
+          <p>{{ personalInfo()!.nom }}</p>
+        </div>
+        <div class="info-item">
+          <label>Âge</label>
+          <p>{{ personalInfo()!.age }} ans</p>
+        </div>
+      </div>
+    </div>
+  </app-modal>
+
+  <!-- Modal Diplôme (singulier) -->
+  <app-modal 
+    [isOpen]="isDiplomesModalOpen()" 
+    [title]="'Mon Diplôme'"
+    (closeModal)="closeDiplomesModal()">
+    <div class="diplome-detail">
+      <div class="diplome-item">
+        <div class="diplome-header">
+          <h3>{{ personalInfo()!.diplome.name }}</h3>
+          <span class="diplome-level">{{ personalInfo()!.diplome.levels }}</span>
+        </div>
+        <p class="diplome-description">{{ personalInfo()!.diplome.description }}</p>
+      </div>
+    </div>
+  </app-modal>
+
+  <!-- Modal Certifications -->
+  <app-modal 
+    [isOpen]="isCertificationsModalOpen()" 
+    [title]="'Mes Certifications'"
+    (closeModal)="closeCertificationsModal()">
+    <div class="certifications-grid">
+      @for (cert of personalInfo()!.certification; track cert.id) {
+        <div class="certification-item" (click)="openCertificationDetail(cert)">
+          <div class="certification-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3>{{ cert.name }}</h3>
+          <p>{{ cert.description }}</p>
+          <span class="view-badge">Voir détails →</span>
+        </div>
+      }
+    </div>
+  </app-modal>
+
+  <!-- Modal Détail Certification -->
+  <app-modal 
+    [isOpen]="isCertificationDetailModalOpen()" 
+    [title]="selectedCertification()?.name || ''"
+    (closeModal)="closeCertificationDetail()">
+    @if (selectedCertification()) {
+      <div class="certification-detail">
+        <p class="certification-description">{{ selectedCertification()!.description }}</p>
+        <button class="external-link-btn" (click)="openCertificationLink(selectedCertification()!.link)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          Voir la certification
+        </button>
+      </div>
+    }
+  </app-modal>
+}
