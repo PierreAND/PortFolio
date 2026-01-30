@@ -4,6 +4,8 @@ export interface PersonalInfo {
     age: number,
     diplome: Diplome,
     certification: Certification[],
+    interet: string,
+    skills: string
 }
 
 
@@ -21,5 +23,6 @@ export interface Certification {
     date: string
     name: string,
     description: string,
+    poste: string,
     link: string
 }

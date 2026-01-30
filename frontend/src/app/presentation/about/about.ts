@@ -1,12 +1,15 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { PersonalInfo, Diplome, Certification } from '../../models/personalInfo-model';
 import { PortfolioService } from '../../services/portfolio-service';
 import { Modal } from '../shared/modal/modal/modal';
+import { Contact } from '../contact/contact';
+import { Projects } from '../projects/projects';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule, Modal],
+  imports: [CommonModule, Modal, Contact, Projects],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
@@ -17,12 +20,15 @@ export class About implements OnInit {
   isProfileModalOpen = signal(false);
   isDiplomesModalOpen = signal(false);
   isCertificationsModalOpen = signal(false);
+ 
   
 
   selectedCertification = signal<Certification | null>(null);
   isCertificationDetailModalOpen = signal(false);
 
-  constructor(private portfolioService: PortfolioService) {}
+  constructor(private portfolioService: PortfolioService,
+    private router: Router
+  ) {}
   
   ngOnInit(): void {
     this.portfolioService.GetPersonalInfo().subscribe(
@@ -30,6 +36,7 @@ export class About implements OnInit {
     );
   }
   
+
 
   openProfileModal(): void {
     this.isProfileModalOpen.set(true);
@@ -67,5 +74,9 @@ export class About implements OnInit {
   
   openCertificationLink(link: string): void {
     window.open(link, '_blank');
+  }
+
+   downloadCV(): void {
+    this.portfolioService.getCVdownload();
   }
 }

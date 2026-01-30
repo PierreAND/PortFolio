@@ -10,5 +10,6 @@ export interface Project {
 
 export interface Techno {
     id: number,
-    name: string
+    name: string,
+    logo: string
 }
