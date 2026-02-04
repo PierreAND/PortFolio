@@ -4,8 +4,12 @@ export interface Project {
     description: string,
     technos: Techno[],
     github: string,
-    imageUrl: string
+    url: string,
+    imageUrl: string,
+    discord?: string 
 }
+
+
 
 
 export interface Techno {

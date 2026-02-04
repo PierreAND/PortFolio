@@ -1,23 +1,96 @@
 <div class="dashboard-card project-card">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            <path d="M9 12l2 2 4-4"></path>
-          </svg>
+  <div class="card-icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      <path d="M9 12l2 2 4-4"></path>
+    </svg>
+  </div>
+  <div class="card-content">
+    <h3>Projets</h3>
+    <p class="card-description">Projets Selectionnés</p>
+    <div class="card-stats">
+      <span class="stat-badge">{{ projectInfo()!.length }}</span>
+    </div>
+  </div>
+  <button class="card-action-btn" (click)="openProjectModal()">
+    Explorer
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </button>
+</div>
+
+<app-modal
+  [isOpen]="isProjectModalOpen()"
+  [title]="'Mes Projets'"
+  (closeModal)="closeProjectModal()"
+>
+  <div class="project-grid">
+    @for (pro of projectInfo(); track pro.id) {
+      <div class="project-item" (click)="openDetailsProject(pro)">
+        <h3>{{ pro.titre }}</h3>
+        <div class="technos-container">
+          @for (techno of pro.technos; track techno.id) {
+            <img [src]="techno.logo" [alt]="techno.name" [title]="techno.name" />
+          }
         </div>
-        <div class="card-content">
-          <h3>Projets</h3>
-          <p class="card-description">Projets Selectionnés</p>
-          <div class="card-stats">
-            <span class="stat-badge">{{projectInfo()!.length}}</span>
-          </div>
+        <div class="title-project">
+          <a [href]="pro.url" target="_blank" (click)="$event.stopPropagation()">
+            <h4>{{ pro.url }}</h4>
+          </a>
         </div>
-        <button class="card-action-btn" (click)="openProjectModal()">
-          Explorer
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </button>
+        <p>{{ pro.description }}</p>
+        <span class="view-badge">Voir détails →</span>
       </div>
-    
+    }
+  </div>
+</app-modal>
+
+<app-modal
+  [isOpen]="isDetailModalOpen()"
+  [title]="'Détails du projet'"
+  (closeModal)="closeDetailproject()"
+>
+  @if (selectedProject()) {
+    <div class="project-details">
+      <h2>{{ selectedProject()!.titre }}</h2>
+
+      <a [href]="selectedProject()!.github" target="_blank">
+        <h4>GitHub</h4>
+      </a>
+
+      <a *ngIf="selectedProject()!.discord" [href]="selectedProject()!.discord" target="_blank">
+        <h4>Discord</h4>
+      </a>
+
+      <div class="pdf-viewer-container">
+        <iframe
+          [src]="getSafeUrl(selectedProject()!.imageUrl)"
+          width="100%"
+          height="600px"
+          frameborder="0"
+          allow="autoplay"
+          class="pdf-iframe"
+        >
+        </iframe>
+      </div>
+    </div>
+  }
+</app-modal>

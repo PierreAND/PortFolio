@@ -1,11 +1,17 @@
 @if (personalInfo()) {
   <div class="backoffice-container">
-   
-
     <div class="dashboard-grid">
       <div class="dashboard-card profile-card">
         <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
             <circle cx="12" cy="7" r="4"></circle>
           </svg>
@@ -20,22 +26,34 @@
         </div>
         <button class="card-action-btn" (click)="openProfileModal()">
           Voir les détails
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </button>
       </div>
 
-      <app-contact>
-        
-
-
-      </app-contact>
+      <app-contact> </app-contact>
 
       <div class="dashboard-card diplomes-card">
         <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
             <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
           </svg>
@@ -49,39 +67,71 @@
         </div>
         <button class="card-action-btn" (click)="openDiplomesModal()">
           Consulter
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
         </button>
       </div>
-        <div class="dashboard-card cv-card">
-    <div class="card-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-        <polyline points="14 2 14 8 20 8"></polyline>
-        <line x1="16" y1="13" x2="8" y2="13"></line>
-        <line x1="16" y1="17" x2="8" y2="17"></line>
-        <polyline points="10 9 9 9 8 9"></polyline>
-      </svg>
-    </div>
-    <div class="card-content">
-      <h3>Curriculum Vitae</h3>
-      <p class="card-description">Téléchargez mon CV au format PDF</p>
-    </div>
-    <button class="card-action-btn" (click)="downloadCV()">
-      Télécharger
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-        <polyline points="7 10 12 15 17 10"></polyline>
-        <line x1="12" y1="15" x2="12" y2="3"></line>
-      </svg>
-    </button>
-  </div>
-    <app-projects></app-projects>
+      <div class="dashboard-card cv-card">
+        <div class="card-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <div class="card-content">
+          <h3>Curriculum Vitae</h3>
+          <p class="card-description">Téléchargez mon CV au format PDF</p>
+        </div>
+        <button class="card-action-btn" (click)="downloadCV()">
+          Télécharger
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </button>
+      </div>
+      <app-projects></app-projects>
       <div class="dashboard-card certifications-card">
         <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             <path d="M9 12l2 2 4-4"></path>
           </svg>
@@ -90,12 +140,22 @@
           <h3>Certifications</h3>
           <p class="card-description">Compétences certifiées</p>
           <div class="card-stats">
-            <span class="stat-badge">{{ personalInfo()!.certification.length }} certification(s)</span>
+            <span class="stat-badge"
+              >{{ personalInfo()!.certification.length }} certifications</span
+            >
           </div>
         </div>
         <button class="card-action-btn" (click)="openCertificationsModal()">
           Explorer
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <line x1="5" y1="12" x2="19" y2="12"></line>
             <polyline points="12 5 19 12 12 19"></polyline>
           </svg>
@@ -104,11 +164,17 @@
     </div>
   </div>
 
-  <app-modal 
-    [isOpen]="isProfileModalOpen()" 
+  <app-modal
+    [isOpen]="isProfileModalOpen()"
     [title]="'Profil Personnel'"
-    (closeModal)="closeProfileModal()">
+    (closeModal)="closeProfileModal()"
+  >
     <div class="profile-modal-content">
+      <div class="header">
+        <div class="photo-profile">
+          <img src="andrieu.png" alt="photo de profil">
+        </div>
+      </div>
       <div class="profile-info-grid">
         <div class="info-item">
           <label>Loisirs</label>
@@ -122,11 +188,11 @@
     </div>
   </app-modal>
 
- 
-  <app-modal 
-    [isOpen]="isDiplomesModalOpen()" 
+  <app-modal
+    [isOpen]="isDiplomesModalOpen()"
     [title]="'Mon Diplôme'"
-    (closeModal)="closeDiplomesModal()">
+    (closeModal)="closeDiplomesModal()"
+  >
     <div class="diplome-detail">
       <div class="diplome-item">
         <div class="diplome-header">
@@ -135,19 +201,30 @@
         </div>
         <p class="diplome-description">{{ personalInfo()!.diplome.description }}</p>
       </div>
+      <button class="dpOpen-btn" (click)="openDossierPro()">
+        <span class="view-badge">Dossier Professionnel</span>
+      </button>
     </div>
   </app-modal>
 
-  
-  <app-modal 
-    [isOpen]="isCertificationsModalOpen()" 
+  <app-modal
+    [isOpen]="isCertificationsModalOpen()"
     [title]="'Mes Certifications'"
-    (closeModal)="closeCertificationsModal()">
+    (closeModal)="closeCertificationsModal()"
+  >
     <div class="certifications-grid">
       @for (cert of personalInfo()!.certification; track cert.id) {
         <div class="certification-item" (click)="openCertificationDetail(cert)">
           <div class="certification-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </div>
@@ -158,27 +235,53 @@
       }
     </div>
   </app-modal>
- 
-  
-  <app-modal 
-    [isOpen]="isCertificationDetailModalOpen()" 
+
+  <app-modal
+    [isOpen]="isCertificationDetailModalOpen()"
     [title]="selectedCertification()?.name || ''"
-    (closeModal)="closeCertificationDetail()">
+    (closeModal)="closeCertificationDetail()"
+  >
     @if (selectedCertification()) {
       <div class="certification-detail">
         <p class="certification-description">{{ selectedCertification()!.poste }}</p>
-        <button class="external-link-btn" (click)="openCertificationLink(selectedCertification()!.link)">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button
+          class="external-link-btn"
+          (click)="openCertificationLink(selectedCertification()!.link)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
             <polyline points="15 3 21 3 21 9"></polyline>
             <line x1="10" y1="14" x2="21" y2="3"></line>
           </svg>
           Voir la certification
         </button>
-       
       </div>
-
     }
   </app-modal>
 
+  <app-modal
+    [isOpen]="isDpOpen()"
+    [title]="'Dossier Professionnel'"
+    (closeModal)="closeDossierPro()"
+  >
+    <div class="pdf-viewer-container">
+      <iframe
+        [src]="dossierProPdfUrl()"
+        width="100%"
+        height="600px"
+        frameborder="0"
+        allow="autoplay"
+        class="pdf-iframe"
+      >
+      </iframe>
+    </div>
+  </app-modal>
 }
