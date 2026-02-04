@@ -31,14 +31,22 @@ jobs:
         run: npm run build -- --configuration production
         working-directory: frontend
 
+      - name: List build output
+        run: |
+          echo "=== dist/frontend/browser ==="
+          ls -la dist/frontend/browser/
+          echo "=== dist/frontend/browser/browser ==="
+          ls -la dist/frontend/browser/browser/
+        working-directory: frontend
+
       - name: Prepare for Surge (SPA routing)
         run: |
-          cd dist/frontend/browser
+          cd dist/frontend/browser/browser
           cp index.html 200.html
         working-directory: frontend
 
       - name: Deploy to Surge
         run: |
           npm install -g surge
-          surge dist/frontend/browser ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+          surge dist/frontend/browser/browser ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
         working-directory: frontend
