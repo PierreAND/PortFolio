@@ -41,4 +41,4 @@ jobs:
       - name: Deploy to Surge
         run: |
           echo "Deploying to Surge..."
-          surge ./dist --domain ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }} --project ./dist
+          surge dist/frontend/browser ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
