@@ -39,4 +39,4 @@ jobs:
         run: |
           npm install -g surge
           surge dist/frontend/browser ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
-        working-directory: fronten
+        working-directory: frontend
