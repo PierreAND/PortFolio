@@ -23,7 +23,7 @@ export const CERTIFICATION: Certification[] = [
 
 export const DIPLOME: Diplome = {
     name: "Concepteur Développeur d’Applications",
-    ecole: "O'clock",
+    ecole: "O'Clock",
     description: "Développer une application sécurisée / Concevoir et développer une application sécurisée organisée en couches / Préparer le déploiement d'une application sécurisée ",
     levels: "RNCP niveau 6 (BAC +4)",
     liens: "https://www.francecompetences.fr/recherche/rncp/37873/",
