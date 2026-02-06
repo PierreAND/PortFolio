@@ -11,23 +11,34 @@ import { PortfolioService } from '../../services/portfolio-service';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact implements OnInit  {
-  contactInfo = signal<ContactInfo | null >(null)
+export class Contact implements OnInit {
+  contactInfo = signal<ContactInfo | null>(null);
 
-  isContactInfoModalOpen = signal(false)
-  constructor(private portfolioService : PortfolioService) {}
+
+  isContactExpanded = signal(false);
+
+
+  isContactInfoModalOpen = signal(false);
+
+  constructor(private portfolioService: PortfolioService) {}
 
   ngOnInit(): void {
     this.portfolioService.getContactInfo().subscribe(
       data => this.contactInfo.set(data)
-    )
+    );
   }
 
+
+  toggleContact(): void {
+    this.isContactExpanded.update(value => !value);
+  }
+
+
   openContactInfoModal(): void {
-    this.isContactInfoModalOpen.set(true)
+    this.isContactInfoModalOpen.set(true);
   }
 
   closeContactModal(): void {
-    this.isContactInfoModalOpen.set(false)
+    this.isContactInfoModalOpen.set(false);
   }
 }

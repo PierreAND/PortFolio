@@ -1,7 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { PersonalInfo, Diplome, Certification } from '../../models/personalInfo-model';
 import { PortfolioService } from '../../services/portfolio-service';
 import { Modal } from '../shared/modal/modal/modal';
@@ -17,36 +16,47 @@ import { Projects } from '../projects/projects';
 export class About implements OnInit {
   personalInfo = signal<PersonalInfo | null>(null);
   
+
+  isProfileExpanded = signal(false);
+  isDiplomeExpanded = signal(false);
+  isCVExpanded = signal(false);
+  isCertificationsExpanded = signal(false);
+
   isProfileModalOpen = signal(false);
   isDiplomesModalOpen = signal(false);
   isCertificationsModalOpen = signal(false);
-  isDpOpen = signal(false);
+
   selectedCertification = signal<Certification | null>(null);
   isCertificationDetailModalOpen = signal(false);
-  
-
-  dossierProPdfUrl = signal<SafeResourceUrl | null>(null);
 
   constructor(
     private portfolioService: PortfolioService,
-    private router: Router,
-    private sanitizer: DomSanitizer
+    private router: Router
   ) {}
   
   ngOnInit(): void {
     this.portfolioService.GetPersonalInfo().subscribe(
       data => this.personalInfo.set(data)
     );
-    
-  
-    this.initializeDossierProPdf();
   }
   
-  private initializeDossierProPdf(): void {
-    const fileId = '1rxkdHX41CsHOf4MYS2xNlTEL9bGLwWgg'; 
-    const url = `https://drive.google.com/file/d/${fileId}/preview`;
-    this.dossierProPdfUrl.set(this.sanitizer.bypassSecurityTrustResourceUrl(url));
+
+  toggleProfile(): void {
+    this.isProfileExpanded.update(value => !value);
   }
+  
+  toggleDiplome(): void {
+    this.isDiplomeExpanded.update(value => !value);
+  }
+  
+  toggleCV(): void {
+    this.isCVExpanded.update(value => !value);
+  }
+  
+  toggleCertifications(): void {
+    this.isCertificationsExpanded.update(value => !value);
+  }
+
 
   openProfileModal(): void {
     this.isProfileModalOpen.set(true);
@@ -84,18 +94,6 @@ export class About implements OnInit {
   
   openCertificationLink(link: string): void {
     window.open(link, '_blank');
-  }
-  
-  openDossierPro(): void {
-    this.closeDiplomesModal()
-    setTimeout(()=> {
-      this.isDpOpen.set(true);
-
-    },100)
-  }
-
-  closeDossierPro(): void {
-    this.isDpOpen.set(false);
   }
 
   downloadCV(): void {

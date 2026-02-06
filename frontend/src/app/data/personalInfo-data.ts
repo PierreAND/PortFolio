@@ -27,7 +27,7 @@ export const DIPLOME: Diplome = {
     description: "Développer une application sécurisée / Concevoir et développer une application sécurisée organisée en couches / Préparer le déploiement d'une application sécurisée ",
     levels: "RNCP niveau 6 (BAC +4)",
     liens: "https://www.francecompetences.fr/recherche/rncp/37873/",
-    dossier: "https://drive.google.com/file/d/1rxkdHX41CsHOf4MYS2xNlTEL9bGLwWgg/view?usp=sharing",
+    dossier: "https://drive.google.com/file/d/1rxkdHX41CsHOf4MYS2xNlTEL9bGLwWgg/preview",
 }
 
 export const PERSONAL_INFO: PersonalInfo = {
