@@ -1,3 +1,4 @@
+import { identifierName } from '@angular/compiler';
 import { Project, Techno } from '../models/projectInfo-model';
 
 export const TECHNOS: Techno[] = [
@@ -41,6 +42,11 @@ export const TECHNOS: Techno[] = [
     name: 'React',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
   },
+  {
+    id: 9,
+    name: 'Traeffik',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/traefikproxy/traefikproxy-original.svg',
+  },
 ];
 
 export const PROJECT_DATA: Project[] = [
@@ -53,20 +59,26 @@ export const PROJECT_DATA: Project[] = [
     github: 'https://github.com/PierreAND/ProjectPersoWow',
     url: 'https://www.wowpti.fr',
     imageUrl: 'https://drive.google.com/file/d/1ekvkWOT4FrfDEgiwFZaW4w-u0qsExwvt/preview',
-    discord: 'https://discord.gg/tKmTR73B'
-    
+    discord: 'https://discord.gg/tKmTR73B',
   },
   {
     id: 2,
     titre: 'RandoTrack',
     description:
       'RandoTrack est une application web dédiée aux randonneurs souhaitant planifier et suivre leurs aventures. Elle permet de pré-tracer des itinéraires, d’ajouter des points d’intérêt et de visualiser les courbes de dénivelé. Grâce au suivi GPS, les utilisateurs bénéficient d’un positionnement en temps réel lors de leurs sorties. Les parcours réalisés sont accessibles publiquement avec des statistiques clés telles que la difficulté, la durée, la distance parcourue et le dénivelé total',
-    technos: TECHNOS.filter((technos) => [5, 3, , 1].includes(technos.id)),
+    technos: TECHNOS.filter((technos) => [5, 3,  1].includes(technos.id)),
     github: 'https://github.com/O-clock-Elfe/projet-6-rando-track',
     url: 'https://randotrack.vercel.app',
     imageUrl: 'https://drive.google.com/file/d/101fyDxFwNCMNCen6i7o9r_bKnxyOETlw/preview',
-    
-
   },
-
+  {
+    id: 3,
+    titre: "DistRaid",
+    description: "Distraid est un outil de gestion de loot pour les guildes de raid dans WoW (ou tout MMO similaire). Le problème qu'il résout : dans un raid de 20+ joueurs, quand un boss meurt et drop un loot, comment décider qui le reçoit de manière juste ? Sans système, c'est le bordel — favoritisme, frustrations, drama. Distraid automatise ça avec le système DKP : Côté joueur — tu parcours la liste des boss, tu vois les loots disponibles, et tu ajoutes ceux que tu veux à ta wishlist. Tu accumules des points en participant régulièrement aux raids. Côté admin (raid lead) — tu vois en un coup d'œil qui veut quoi, avec combien de points. Quand un loot drop, tu cliques dessus, tu vois les candidats triés par points, et tu l'attribues au joueur le plus méritant. Les points sont déduits automatiquement. Le principe d'équité : celui qui vient le plus souvent sans rien recevoir monte en points et devient prioritaire",
+    technos: TECHNOS.filter((technos)=> [5,4,2,1,9].includes(technos.id)),
+    github: 'https://github.com/PierreAND/DistRaid',
+    url: 'www.distraid.fr',
+    imageUrl: ''
+  
+  },
 ];
