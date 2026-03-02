@@ -47,6 +47,16 @@ export const TECHNOS: Techno[] = [
     name: 'Traeffik',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/traefikproxy/traefikproxy-original.svg',
   },
+  {
+    id: 10,
+    name: 'Expo',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg',
+  },
+  {
+    id: 11,
+    name: 'Symfony',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg',
+  },
 ];
 
 export const PROJECT_DATA: Project[] = [
@@ -77,7 +87,17 @@ export const PROJECT_DATA: Project[] = [
     description: "Distraid est un outil de gestion de loot pour les guildes de raid dans WoW (ou tout MMO similaire). Le problème qu'il résout : dans un raid de 20+ joueurs, quand un boss meurt et drop un loot, comment décider qui le reçoit de manière juste ? Sans système, c'est le bordel — favoritisme, frustrations, drama. Distraid automatise ça avec le système DKP : Côté joueur — tu parcours la liste des boss, tu vois les loots disponibles, et tu ajoutes ceux que tu veux à ta wishlist. Tu accumules des points en participant régulièrement aux raids. Côté admin (raid lead) — tu vois en un coup d'œil qui veut quoi, avec combien de points. Quand un loot drop, tu cliques dessus, tu vois les candidats triés par points, et tu l'attribues au joueur le plus méritant. Les points sont déduits automatiquement. Le principe d'équité : celui qui vient le plus souvent sans rien recevoir monte en points et devient prioritaire",
     technos: TECHNOS.filter((technos)=> [5,4,2,1,9].includes(technos.id)),
     github: 'https://github.com/PierreAND/DistRaid',
-    url: 'www.distraid.fr',
+    url: 'https://www.distraid.fr',
+    imageUrl: ''
+  
+  },
+  {
+    id: 3,
+    titre: "Treat",
+    description: "Treat est une application mobile qui permet d’organiser des événements entre amis. L’utilisateur crée un événement lié à une activité (week-end, sport, sortie, soirée), invite ses amis qui reçoivent une notification et confirment leur participation. À la fin de l’événement, un vote sous forme de QCM permet d’attribuer des points bonus/malus à chaque membre (ex: MVP, fairplay, anti-jeu, rabat-joie, flemmard...). Un algorithme établit ensuite un classement et répartit équitablement une éventuelle dépense de groupe (comme un coup à boire ou une note à partager)",
+    technos: TECHNOS.filter((technos)=> [10,11,8,5].includes(technos.id)),
+    github: 'https://github.com/PierreAND/Treat',
+    url: '',
     imageUrl: ''
   
   },
