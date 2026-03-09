@@ -61,7 +61,7 @@ export const TECHNOS: Techno[] = [
 
 export const PROJECT_DATA: Project[] = [
   {
-    id: 1,
+    id: 3,
     titre: 'Wowpti',
     description:
       "Mise en place pour le jeu World of Warcraft, d'un logiciel open-source qui permet d'avoir une optimisation idéale de ses personnages. (Angular/NestJS) Hébergée sur un NAS domestique via conteneurs Docker. Nginx sert de reverse proxy ,avec redirection vers le conteneur frontend. Un nom de domaine personnalisé (OVH) pointe via DNS (enregistrement A) vers l'IP publique du routeur. Dynhost met à jour automatiquement l'IP. Traefik gère les certificats SSL automatiquement",
@@ -82,7 +82,7 @@ export const PROJECT_DATA: Project[] = [
     imageUrl: 'https://drive.google.com/file/d/101fyDxFwNCMNCen6i7o9r_bKnxyOETlw/preview',
   },
   {
-    id: 3,
+    id: 1,
     titre: "DistRaid",
     description: "Distraid est un outil de gestion de loot pour les guildes de raid dans WoW (ou tout MMO similaire). Le problème qu'il résout : dans un raid de 20+ joueurs, quand un boss meurt et drop un loot, comment décider qui le reçoit de manière juste ? Sans système, c'est le bordel — favoritisme, frustrations, drama. Distraid automatise ça avec le système DKP : Côté joueur — tu parcours la liste des boss, tu vois les loots disponibles, et tu ajoutes ceux que tu veux à ta wishlist. Tu accumules des points en participant régulièrement aux raids. Côté admin (raid lead) — tu vois en un coup d'œil qui veut quoi, avec combien de points. Quand un loot drop, tu cliques dessus, tu vois les candidats triés par points, et tu l'attribues au joueur le plus méritant. Les points sont déduits automatiquement. Le principe d'équité : celui qui vient le plus souvent sans rien recevoir monte en points et devient prioritaire",
     technos: TECHNOS.filter((technos)=> [5,4,2,1,9].includes(technos.id)),
