@@ -61,27 +61,6 @@ export const TECHNOS: Techno[] = [
 
 export const PROJECT_DATA: Project[] = [
   {
-    id: 3,
-    titre: 'Wowpti',
-    description:
-      "Mise en place pour le jeu World of Warcraft, d'un logiciel open-source qui permet d'avoir une optimisation idéale de ses personnages. (Angular/NestJS) Hébergée sur un NAS domestique via conteneurs Docker. Nginx sert de reverse proxy ,avec redirection vers le conteneur frontend. Un nom de domaine personnalisé (OVH) pointe via DNS (enregistrement A) vers l'IP publique du routeur. Dynhost met à jour automatiquement l'IP. Traefik gère les certificats SSL automatiquement",
-    technos: TECHNOS.filter((technos) => [5, 4, 2, 1].includes(technos.id)),
-    github: 'https://github.com/PierreAND/ProjectPersoWow',
-    url: 'https://www.wowpti.fr',
-    imageUrl: 'https://drive.google.com/file/d/1ekvkWOT4FrfDEgiwFZaW4w-u0qsExwvt/preview',
-    discord: 'https://discord.gg/tKmTR73B',
-  },
-  {
-    id: 2,
-    titre: 'RandoTrack',
-    description:
-      'RandoTrack est une application web dédiée aux randonneurs souhaitant planifier et suivre leurs aventures. Elle permet de pré-tracer des itinéraires, d’ajouter des points d’intérêt et de visualiser les courbes de dénivelé. Grâce au suivi GPS, les utilisateurs bénéficient d’un positionnement en temps réel lors de leurs sorties. Les parcours réalisés sont accessibles publiquement avec des statistiques clés telles que la difficulté, la durée, la distance parcourue et le dénivelé total',
-    technos: TECHNOS.filter((technos) => [5, 3,  1].includes(technos.id)),
-    github: 'https://github.com/O-clock-Elfe/projet-6-rando-track',
-    url: 'https://randotrack.vercel.app',
-    imageUrl: 'https://drive.google.com/file/d/101fyDxFwNCMNCen6i7o9r_bKnxyOETlw/preview',
-  },
-  {
     id: 1,
     titre: "DistRaid",
     description: "Distraid est un outil de gestion de loot pour les guildes de raid dans WoW (ou tout MMO similaire). Le problème qu'il résout : dans un raid de 20+ joueurs, quand un boss meurt et drop un loot, comment décider qui le reçoit de manière juste ? Sans système, c'est le bordel — favoritisme, frustrations, drama. Distraid automatise ça avec le système DKP : Côté joueur — tu parcours la liste des boss, tu vois les loots disponibles, et tu ajoutes ceux que tu veux à ta wishlist. Tu accumules des points en participant régulièrement aux raids. Côté admin (raid lead) — tu vois en un coup d'œil qui veut quoi, avec combien de points. Quand un loot drop, tu cliques dessus, tu vois les candidats triés par points, et tu l'attribues au joueur le plus méritant. Les points sont déduits automatiquement. Le principe d'équité : celui qui vient le plus souvent sans rien recevoir monte en points et devient prioritaire",
@@ -92,6 +71,16 @@ export const PROJECT_DATA: Project[] = [
   
   },
   {
+    id: 2,
+    titre: 'RandoTrack',
+    description:
+    'RandoTrack est une application web dédiée aux randonneurs souhaitant planifier et suivre leurs aventures. Elle permet de pré-tracer des itinéraires, d’ajouter des points d’intérêt et de visualiser les courbes de dénivelé. Grâce au suivi GPS, les utilisateurs bénéficient d’un positionnement en temps réel lors de leurs sorties. Les parcours réalisés sont accessibles publiquement avec des statistiques clés telles que la difficulté, la durée, la distance parcourue et le dénivelé total',
+    technos: TECHNOS.filter((technos) => [5, 3,  1].includes(technos.id)),
+    github: 'https://github.com/O-clock-Elfe/projet-6-rando-track',
+    url: 'https://randotrack.vercel.app',
+    imageUrl: 'https://drive.google.com/file/d/101fyDxFwNCMNCen6i7o9r_bKnxyOETlw/preview',
+  },
+  {
     id: 3,
     titre: "Treat",
     description: "Treat est une application mobile qui permet d’organiser des événements entre amis. L’utilisateur crée un événement lié à une activité (week-end, sport, sortie, soirée), invite ses amis qui reçoivent une notification et confirment leur participation. À la fin de l’événement, un vote sous forme de QCM permet d’attribuer des points bonus/malus à chaque membre (ex: MVP, fairplay, anti-jeu, rabat-joie, flemmard...). Un algorithme établit ensuite un classement et répartit équitablement une éventuelle dépense de groupe (comme un coup à boire ou une note à partager)",
@@ -99,6 +88,17 @@ export const PROJECT_DATA: Project[] = [
     github: 'https://github.com/PierreAND/Treat',
     url: '',
     imageUrl: ''
-  
+    
+  },
+  {
+    id: 3,
+    titre: 'Wowpti',
+    description:
+      "Mise en place pour le jeu World of Warcraft, d'un logiciel open-source qui permet d'avoir une optimisation idéale de ses personnages. (Angular/NestJS) Hébergée sur un NAS domestique via conteneurs Docker. Nginx sert de reverse proxy ,avec redirection vers le conteneur frontend. Un nom de domaine personnalisé (OVH) pointe via DNS (enregistrement A) vers l'IP publique du routeur. Dynhost met à jour automatiquement l'IP. Traefik gère les certificats SSL automatiquement",
+    technos: TECHNOS.filter((technos) => [5, 4, 2, 1].includes(technos.id)),
+    github: 'https://github.com/PierreAND/ProjectPersoWow',
+    url: 'https://www.wowpti.fr',
+    imageUrl: 'https://drive.google.com/file/d/1ekvkWOT4FrfDEgiwFZaW4w-u0qsExwvt/preview',
+    discord: 'https://discord.gg/tKmTR73B',
   },
 ];
