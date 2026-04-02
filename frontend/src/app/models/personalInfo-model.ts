@@ -1,7 +1,6 @@
 export interface PersonalInfo {
     prenom: string,
     nom: string,
-    age: number,
     diplome: Diplome,
     certification: Certification[],
     interet: string,

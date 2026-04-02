@@ -32,8 +32,7 @@ export const DIPLOME: Diplome = {
 
 export const PERSONAL_INFO: PersonalInfo = {
     prenom: "Pierre",
-    nom: "Andrieu",
-    age: 30,
+    nom: "Andrieu",    
     diplome: DIPLOME,
     certification: CERTIFICATION , 
     interet: "Natation / Randonnée / Titulaire Permis Côtier",
