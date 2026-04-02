@@ -57,6 +57,16 @@ export const TECHNOS: Techno[] = [
     name: 'Symfony',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg',
   },
+  {
+    id: 12,
+    name: 'Portainer',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/portainer/portainer-original.svg',
+  },
+  {
+    id: 13,
+    name: 'Nginx',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg',
+  },
 ];
 
 export const PROJECT_DATA: Project[] = [
@@ -106,7 +116,7 @@ export const PROJECT_DATA: Project[] = [
     titre: 'NAS Synology',
     description:
       "Administration d’un serveur NAS dédié à l’hébergement d’applications et services personnels, incluant la gestion centralisée des conteneurs Docker via Portainer, l’intégration d’un reverse proxy Traefik et la gestion des certificats SSL. Déploiement et maintenance d’applications dans un environnement isolé, sécurisé et optimisé pour la haute disponibilité, sur une infrastructure équipée de deux slots SO-DIMM et d’un processeur Intel Celeron J4125.",
-    technos: TECHNOS.filter((technos) => [5, 4, 2, 1].includes(technos.id)),
+    technos: TECHNOS.filter((technos) => [9,12,13].includes(technos.id)),
     github: '',
     url: 'https://www.synology.com/fr-fr',
     imageUrl: '',
