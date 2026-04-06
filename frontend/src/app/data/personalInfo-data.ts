@@ -17,7 +17,7 @@ export const CERTIFICATION: Certification[] = [
         link: "https://www.credly.com/badges/50a83057-bbd1-44e5-87d3-2ef5cdbd76cf/linked_in_profile",
         description: "Maîtrise des fondamentaux du cloud AWS: concepts globaux, services clés (calcul, stockage, bases de données).Compréhension des modèles de tarification, facturation et support technique AWS",
         date: "28/05/2025",
-        poste: "Consultants en TIC / Ingénieurs cloud / Consultants en mise en œuvre de technologies / UI Designers"
+        poste: "Consultants en TIC / Ingénieurs cloud / Consultants en mise en œuvre de technologies"
     }
 ]
 
