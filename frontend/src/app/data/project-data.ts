@@ -72,6 +72,16 @@ export const TECHNOS: Techno[] = [
     name: 'AWS',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
   },
+  {
+    id: 15,
+    name: 'Heroku',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/heroku/heroku-original.svg',
+  },
+  {
+    id: 16,
+    name: 'Vercel',
+    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg',
+  },
 ];
 
 export const PROJECT_DATA: Project[] = [
@@ -90,7 +100,7 @@ export const PROJECT_DATA: Project[] = [
     titre: 'RandoTrack',
     description:
       'RandoTrack est une application web dédiée aux randonneurs souhaitant planifier et suivre leurs aventures. Elle permet de pré-tracer des itinéraires, d’ajouter des points d’intérêt et de visualiser les courbes de dénivelé. Grâce au suivi GPS, les utilisateurs bénéficient d’un positionnement en temps réel lors de leurs sorties. Les parcours réalisés sont accessibles publiquement avec des statistiques clés telles que la difficulté, la durée, la distance parcourue et le dénivelé total',
-    technos: TECHNOS.filter((technos) => [5, 3, 1].includes(technos.id)),
+    technos: TECHNOS.filter((technos) => [5, 3, 1, 15, 16].includes(technos.id)),
     github: 'https://github.com/O-clock-Elfe/projet-6-rando-track',
     url: 'https://randotrack.vercel.app',
     imageUrl: 'https://drive.google.com/file/d/101fyDxFwNCMNCen6i7o9r_bKnxyOETlw/preview',
