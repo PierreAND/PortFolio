@@ -69,11 +69,6 @@ export const TECHNOS: Techno[] = [
   },
   {
     id: 14,
-    name: 'NextJs',
-    logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
-  },
-  {
-    id: 15,
     name: 'AWS',
     logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
   },
@@ -83,8 +78,8 @@ export const PROJECT_DATA: Project[] = [
   {
     id: 1,
     titre: "DistRaid",
-    description: "Distraid est un outil de gestion de loot pour les guildes de raid dans WoW (ou tout MMO similaire). Le problème qu'il résout : dans un raid de 20+ joueurs, quand un boss meurt et drop un loot, comment décider qui le reçoit de manière juste ? Sans système, c'est le bordel — favoritisme, frustrations, drama. Distraid automatise ça avec le système DKP : Côté joueur — tu parcours la liste des boss, tu vois les loots disponibles, et tu ajoutes ceux que tu veux à ta wishlist. Tu accumules des points en participant régulièrement aux raids. Côté admin (raid lead) — tu vois en un coup d'œil qui veut quoi, avec combien de points. Quand un loot drop, tu cliques dessus, tu vois les candidats triés par points, et tu l'attribues au joueur le plus méritant. Les points sont déduits automatiquement. Le principe d'équité : celui qui vient le plus souvent sans rien recevoir monte en points et devient prioritaire. Le frontend est hébergé sur mon serveur Nas tandis que le backend tourne sur une instance EC2 AWS - t4g.micro ",
-    technos: TECHNOS.filter((technos) => [5, 4, 2, 1, 9].includes(technos.id)),
+    description: "Distraid est un outil de gestion de loot pour les guildes de raid dans WoW (ou tout MMO similaire). Le problème qu'il résout : dans un raid de 20+ joueurs, quand un boss meurt et drop un loot, comment décider qui le reçoit de manière juste ? Sans système, c'est le bordel — favoritisme, frustrations, drama. Distraid automatise ça avec le système DKP : Côté joueur — tu parcours la liste des boss, tu vois les loots disponibles, et tu ajoutes ceux que tu veux à ta wishlist. Tu accumules des points en participant régulièrement aux raids. Côté admin (raid lead) — tu vois en un coup d'œil qui veut quoi, avec combien de points. Quand un loot drop, tu cliques dessus, tu vois les candidats triés par points, et tu l'attribues au joueur le plus méritant. Les points sont déduits automatiquement. Le principe d'équité : celui qui vient le plus souvent sans rien recevoir monte en points et devient prioritaire. Le frontend tourne sur un serveur Nginx sur mon NAS et le backend tourne sur une instance EC2 AWS - t4g.micro",
+    technos: TECHNOS.filter((technos) => [5, 4, 2, 1, 9, 13, 14].includes(technos.id)),
     github: 'https://github.com/PierreAND/DistRaid',
     url: 'https://www.distraid.fr',
     imageUrl: ''
