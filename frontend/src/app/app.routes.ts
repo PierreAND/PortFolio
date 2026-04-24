@@ -5,8 +5,7 @@ import { Contact } from './presentation/contact/contact';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/about',
-    pathMatch: 'full'
+    component: About
   },
   {
     path: 'about',
@@ -16,5 +15,4 @@ export const routes: Routes = [
     path: 'contact',
     component: Contact
   }
-
 ];
