@@ -5,7 +5,8 @@ import { Contact } from './presentation/contact/contact';
 export const routes: Routes = [
   {
     path: '',
-    component: About
+    component: About,
+    pathMatch: 'full'
   },
   {
     path: 'about',
