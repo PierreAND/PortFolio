@@ -35,7 +35,7 @@ export const PERSONAL_INFO: PersonalInfo = {
     nom: "Andrieu",    
     diplome: DIPLOME,
     certification: CERTIFICATION , 
-    interet: "Natation / Randonnée / Titulaire Permis Côtier",
+    interet: "Natation / Randonnée / Titulaire Permis Côtier / RaidLeader World of Wacraft",
     skills: "Perseverant / Adaptation / Esprit d'équipe"
 
     
