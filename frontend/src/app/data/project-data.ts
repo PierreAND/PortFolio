@@ -107,8 +107,8 @@ export const PROJECT_DATA: Project[] = [
   },
   {
     id: 3,
-    titre: "Treat",
-    description: "Treat est une application mobile qui permet d’organiser des événements entre amis. L’utilisateur crée un événement lié à une activité (week-end, sport, sortie, soirée), invite ses amis qui reçoivent une notification et confirment leur participation. À la fin de l’événement, un vote sous forme de QCM permet d’attribuer des points bonus/malus à chaque membre (ex: MVP, fairplay, anti-jeu, rabat-joie, flemmard...). Un algorithme établit ensuite un classement et répartit équitablement une éventuelle dépense de groupe (comme un coup à boire ou une note à partager)",
+    titre: "WGP",
+    description: "WGP est une application mobile qui permet d’organiser des événements entre amis. L’utilisateur crée un événement lié à une activité (week-end, sport, sortie, soirée), invite ses amis qui reçoivent une notification et confirment leur participation. À la fin de l’événement, un vote sous forme de QCM permet d’attribuer des points bonus/malus à chaque membre (ex: MVP, fairplay, anti-jeu, rabat-joie, flemmard...). Un algorithme établit ensuite un classement et répartit équitablement une éventuelle dépense de groupe (comme un coup à boire ou une note à partager)",
     technos: TECHNOS.filter((technos) => [10, 11, 8, 5].includes(technos.id)),
     github: 'https://github.com/PierreAND/Treat',
     url: '',
@@ -120,7 +120,7 @@ export const PROJECT_DATA: Project[] = [
     titre: 'Wowpti',
     description:
       "Mise en place pour le jeu World of Warcraft, d'un logiciel open-source qui permet d'avoir une optimisation idéale de ses personnages. (Angular/NestJS) Hébergée sur un NAS domestique via conteneurs Docker. Nginx sert de reverse proxy ,avec redirection vers le conteneur frontend. Un nom de domaine personnalisé (OVH) pointe via DNS (enregistrement A) vers l'IP publique du routeur. Dynhost met à jour automatiquement l'IP. Traefik gère les certificats SSL automatiquement",
-    technos: TECHNOS.filter((technos) => [5, 4, 2, 1].includes(technos.id)),
+    technos: TECHNOS.filter((technos) => [5, 4, 2, 1, 9, 13, 14].includes(technos.id)),
     github: 'https://github.com/PierreAND/ProjectPersoWow',
     url: 'https://www.wowpti.fr',
     imageUrl: 'https://drive.google.com/file/d/1ekvkWOT4FrfDEgiwFZaW4w-u0qsExwvt/preview',
