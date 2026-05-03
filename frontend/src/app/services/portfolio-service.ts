@@ -14,7 +14,7 @@ import { PROJECT_DATA } from "../data/project-data";
 
 export class PortfolioService {
     set(data: any) {
-      throw new Error('Method not implemented.');
+        throw new Error('Method not implemented.');
     }
     GetPersonalInfo(): Observable<PersonalInfo> {
         return of(PERSONAL_INFO)
@@ -27,23 +27,25 @@ export class PortfolioService {
     getDiplomeInfo(): Observable<Diplome> {
         return of(DIPLOME)
     }
-    
+
     getCertificationInfo(): Observable<Certification[]> {
         return of(CERTIFICATION)
     }
-    
+
     getProjectInfo(): Observable<Project[]> {
         return of(PROJECT_DATA)
     }
 
-    
-    getCVdownload():  void {
-    const link = document.createElement('a');
-    link.href = "CV_PIERRE_ANDRIEU_.pdf"
-    link.download = 'CV_ANDRIEU_Pierre.pdf';
-    link.click()
-}
+
+    getCVdownload(): void {
+        const link = document.createElement('a');
+        link.href = 'assets/CV_PIERRE_ANDRIEU_.pdf';
+        link.download = 'CV_ANDRIEU_Pierre.pdf';
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
 
 
-
+    }
 }
