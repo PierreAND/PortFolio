@@ -39,7 +39,7 @@ export class PortfolioService {
     
     getCVdownload():  void {
     const link = document.createElement('a');
-    link.href = "mon-cv.pdf"
+    link.href = "CV_PIERRE_ANDRIEU_.pdf"
     link.download = 'CV_ANDRIEU_Pierre.pdf';
     link.click()
 }
