@@ -111,7 +111,7 @@ export const PROJECT_DATA: Project[] = [
     description: "WGP est une application mobile qui permet d’organiser des événements entre amis. L’utilisateur crée un événement lié à une activité (week-end, sport, sortie, soirée), invite ses amis qui reçoivent une notification et confirment leur participation. À la fin de l’événement, un vote sous forme de QCM permet d’attribuer des points bonus/malus à chaque membre (ex: MVP, fairplay, anti-jeu, rabat-joie, flemmard...). Un algorithme établit ensuite un classement et répartit équitablement une éventuelle dépense de groupe (comme un coup à boire ou une note à partager)",
     technos: TECHNOS.filter((technos) => [10, 11, 8, 5].includes(technos.id)),
     github: 'https://github.com/PierreAND/Treat',
-    url: '',
+    url: 'https://apps.apple.com/ca/app/wgp/id6761407171',
     imageUrl: ''
 
   },
