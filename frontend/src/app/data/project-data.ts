@@ -130,8 +130,8 @@ export const PROJECT_DATA: Project[] = [
     id: 5,
     titre: 'NAS Synology',
     description:
-      "Administration d’un serveur NAS dédié à l’hébergement d’applications et services personnels, incluant la gestion centralisée des conteneurs Docker via Portainer, l’intégration d’un reverse proxy Traefik et la gestion des certificats SSL. Déploiement et maintenance d’applications dans un environnement isolé, sécurisé et optimisé pour la haute disponibilité, sur une infrastructure équipée de deux slots SO-DIMM et d’un processeur Intel Celeron J4125.",
-    technos: TECHNOS.filter((technos) => [9,12,13].includes(technos.id)),
+      "Administration d'un serveur NAS dédié à l'hébergement d'applications et services personnels. Gestion centralisée des conteneurs Docker via Portainer, intégration d'un reverse proxy Traefik et gestion des certificats SSL. Mise en place d'un accès nomade sécurisé via OpenVPN : configuration d'une règle PAT (redirection de port UDP entrant) sur le routeur, réservation DHCP du NAS et mise en place d'un DNS dynamique (DDNS) pour pallier l'IP publique dynamique du FAI. Déploiement et maintenance d'applications dans un environnement isolé, sécurisé et optimisé pour la haute disponibilité, sur une infrastructure équipée de deux slots SO-DIMM et d'un processeur Intel Celeron J4125.",
+    technos: TECHNOS.filter((technos) => [9, 12, 13].includes(technos.id)),
     github: '',
     url: 'https://www.synology.com/fr-fr',
     imageUrl: '',
